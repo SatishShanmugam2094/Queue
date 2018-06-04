@@ -27,29 +27,34 @@ namespace CustomQueue
             }
             last.next = newNode;
         }
-        public void Dequeue()
+
+        public T Dequeue()
         {
             if (first == null)
             {
                 Console.WriteLine("The queue is empty");
-                return;
+                return default(T);
             }
             Node<T> last = first;
+            Node<T> toReturn = last;
             if (last != null)
             {
                 first = last.next;
                 last = null;
             }
-        }
-        public void Peek()
+            return toReturn.item;
+        } 
+
+        public T Peek()
         {
             if (first == null)
             {
                 Console.WriteLine("The queue is empty");
-                return;
+                return default(T);
             }
-            Console.WriteLine(first.item);
+           return first.item;
         }
+
         public void Print()
         {
             Node<T> element = first;

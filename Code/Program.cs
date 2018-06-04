@@ -13,10 +13,10 @@ namespace CustomQueue
             Console.WriteLine("Printing values after adding in queue");
             queue.Print();
             Console.WriteLine("Printing values after deleting in queue");
-            queue.Dequeue();
+            Console.WriteLine("The value dequeued is {0}", queue.Dequeue());
             queue.Print();
             Console.WriteLine("Printing the first element in queue");
-            queue.Peek();
+            Console.WriteLine("The value on first is {0}", queue.Peek());
             Console.Read();
         }
     }
